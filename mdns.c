@@ -161,6 +161,7 @@ service_callback(int sock, const struct sockaddr* from, size_t addrlen, mdns_ent
 			                  service_record->service, service_length, service_record->hostname,
 			                  strlen(service_record->hostname), service_record->address_ipv4,
 			                  service_record->address_ipv6, (uint16_t)service_record->port, 0, 0);
+			//exit(0);
 		}
 	}
 	return 0;
