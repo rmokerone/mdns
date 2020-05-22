@@ -1061,7 +1061,7 @@ mdns_query_answer(int sock, const void* address, size_t address_size, void* buff
 	}
 
 	size_t tosend = MDNS_POINTER_DIFF(data, buffer);
-	return mdns_unicast_send(sock, address, address_size, buffer, tosend);
+	return mdns_multicast_send(sock, buffer, (size_t)tosend);
 }
 
 static mdns_string_t
